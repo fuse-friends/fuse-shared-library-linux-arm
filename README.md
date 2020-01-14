@@ -1,8 +1,8 @@
-# fuse-shared-library-linux
-A module containing the .so file and configuration scripts necessary for FUSE on Linux.
+# fuse-shared-library-linux-arm
+A module containing the .so file and configuration scripts necessary for FUSE on ARM Linux.
 
 ```
-npm install fuse-shared-library-linux
+npm install fuse-shared-library-linux-arm
 ```
 
 Includes programmatic access to setup the FUSE device and kernel extension as part of a configuration step.
@@ -10,7 +10,7 @@ Includes programmatic access to setup the FUSE device and kernel extension as pa
 ## Usage
 
 ``` js
-const libfuse = require('fuse-shared-library-linux')
+const libfuse = require('fuse-shared-library-linux-arm')
 
 console.log(libfuse.lib) // path to the shared library
 console.log(libfuse.include) // path to the include folder
@@ -44,11 +44,11 @@ Using a GYP file this can be done like this:
     "target_name": "fuse_example",
     "include_dirs": [
       # include it like this
-      "<!(node -e \"require('fuse-shared-library-linux/include')\")"
+      "<!(node -e \"require('fuse-shared-library-linux-arm/include')\")"
     ],
     "libraries": [
       # link it like this
-      "<!(node -e \"require('fuse-shared-library-linux/lib')\")"
+      "<!(node -e \"require('fuse-shared-library-linux-arm/lib')\")"
     ],
     "sources": [
       "your_program.cc"
@@ -61,7 +61,7 @@ Using a GYP file this can be done like this:
     "dependencies": ["fuse_example"],
     "copies": [{
       "destination": "build/Release",
-      "files": [ "<!(node -e \"require('fuse-shared-library-linux/lib')\")" ],
+      "files": [ "<!(node -e \"require('fuse-shared-library-linux-arm/lib')\")" ],
     }]
   }]
 }
