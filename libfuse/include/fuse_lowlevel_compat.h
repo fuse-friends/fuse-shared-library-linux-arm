@@ -72,7 +72,7 @@ size_t fuse_dirent_size(size_t namelen);
 char *fuse_add_dirent(char *buf, const char *name, const struct stat *stbuf,
 		      off_t off);
 
-#if !defined(__FreeBSD__) && !defined(__NetBSD__)
+#if !defined(__FreeBSD__) && !defined(__FreeBSD_kernel__) && !defined(__NetBSD__)
 
 #include <sys/statfs.h>
 

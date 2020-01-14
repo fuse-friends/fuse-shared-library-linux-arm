@@ -959,13 +959,10 @@ void fuse_register_module(struct fuse_module *mod);
  * For the parameters, see description of the fields in 'struct
  * fuse_module'
  */
-#define FUSE_REGISTER_MODULE(name_, factory_)				  \
-	static __attribute__((constructor)) void name_ ## _register(void) \
-	{								  \
-		static struct fuse_module mod =				  \
-			{ #name_, factory_, NULL, NULL, 0 };		  \
-		fuse_register_module(&mod);				  \
-	}
+#define FUSE_REGISTER_MODULE(name_, factory_)                           \
+        struct fuse_module fuse_fusemod_ ## name_ ## _module = {        \
+                #name_, factory_, NULL, NULL, 0                         \
+        };
 
 
 /* ----------------------------------------------------------- *

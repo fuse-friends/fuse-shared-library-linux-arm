@@ -65,7 +65,7 @@ struct fuse *fuse_setup_compat25(int argc, char *argv[],
 
 void fuse_teardown_compat22(struct fuse *fuse, int fd, char *mountpoint);
 
-#if !defined(__FreeBSD__) && !defined(__NetBSD__)
+#if !defined(__FreeBSD__) && !defined(__FreeBSD_kernel__) && !defined(__NetBSD__)
 #include <sys/statfs.h>
 
 struct fuse_operations_compat22 {
