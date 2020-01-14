@@ -1,7 +1,7 @@
 {
-  "name": "fuse-shared-library-linux",
+  "name": "fuse-shared-library-linux-arm",
   "version": "1.0.0",
-  "description": "A module containing the .so file and configuration scripts necessary for FUSE on Linux.",
+  "description": "A module containing the .so file and configuration scripts necessary for FUSE on ARM based Linux.",
   "main": "index.js",
   "directories": {
     "example": "example"
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fuse-friends/fuse-shared-library-linux.git"
+    "url": "git+https://github.com/fuse-friends/fuse-shared-library-linux-arm.git"
   },
   "keywords": [
     "fuse",
@@ -23,9 +23,9 @@
   "author": "Andrew Osheroff <andrewosh@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/fuse-friends/fuse-shared-library-linux/issues"
+    "url": "https://github.com/fuse-friends/fuse-shared-library-linux-arm/issues"
   },
-  "homepage": "https://github.com/fuse-friends/fuse-shared-library-linux#readme",
+  "homepage": "https://github.com/fuse-friends/fuse-shared-library-linux-arm#readme",
   "devDependencies": {
     "standard": "^12.0.1"
   }
